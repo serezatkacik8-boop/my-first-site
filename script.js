@@ -21,3 +21,14 @@ function toggleLike(){
 
   updateUI();
 }
+let secret = Math.floor(Math.random() * 5) + 1;
+
+function checkGuess(){
+  const value = document.getElementById('guessInput').value;
+
+  if(value == secret){
+    document.getElementById('result').innerText = 'Угадал 🎉';
+  } else {
+    document.getElementById('result').innerText = 'Не угадал 😢';
+  }
+}
