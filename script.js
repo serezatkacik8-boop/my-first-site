@@ -13,6 +13,11 @@ function updateUI(){
 function toggleLike(){
   liked = !liked;
   localStorage.setItem('liked', liked);
+
+  btn.classList.add('liked');
+  
+  setTimeout(() => {
+    btn.classList.remove('liked');}, 300);
+
   updateUI();
 }
-updateUI();
