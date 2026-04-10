@@ -3,52 +3,134 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Мой сайт</title>
+  <title>Сергей | Мой сайт</title>
   <style>
-    .card {background: #1e293b;
-      padding: 30px;
-      border-radius: 20px;
-      text-align: center;
-      width: 300px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    *{
+      box-sizing: border-box;
     }
-    body {
-      background:#0f172a;
-      font-family: Arial, Helvetica, sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
+    body{
       margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(135deg, #0f172a, #1e293b);
       color: white;
     }
-    h1 {
-      color: #00ff88;
+    .container{
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
     }
-    button {
-      padding: 10px 20px;
+    .card{
+      background: rgba(255, 255, 255, 0.8);
+      border-radius: 20px;
+      padding: 30px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      margin-bottom: 30px;
+    }
+    .avatar{
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
       background: #00ff88;
+      font-size: 48px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+    }
+    h1{
+      margin: 10px 0;
+      font-size: 18px;
+    }
+    p{
+      margin: 10px 0;
+      font-size: 18px;
+    }
+    .button{
+      margin-top: 20px;
+    }
+    button, a{
+      display: inline-block;
+      margin: 10px 5px 0;
+      padding: 12px 20px;
       border: none;
       border-radius: 10px;
+      text-decoration: none;
+      font-size: 16px;
       cursor: pointer;
+    }
+    button{
+      background: #00ff88;
+      color: white;
+    }
+    a{
+      background: #2563ed;
+      color: white;
+    }
+    .projects{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+    .projects-card{
+      background: rgba(255, 255, 255, 0.8);
+      border-radius: 16px;
+      padding: 20px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+    .projects-card h3{
+      margin-top: 0;
+      color: #00ff88;
+    }
+    #count{
+      font-size: 30px;
+      font-weight: bold;
+      margin-top: 15px;
     }
   </style>
 </head>
 <body>
-  <div class="card">
-    <h1>Привет, я Сергей 👋</h1>
-    <p>Это мой первый сайт</p>
-    <h2 id="count">0</h2>
-    <button onclick="addClick()">Лайк 👍</button>
+  <div class="container">
+    <div class="card">
+      <div class="avatar">S</div>
+      <h1>Сергей 👋</h1>
+      <p>Я учусь делать сайт и работать с GitHub</p>
+      <p>Это мой первый сайт-портфолио</p>
+
+      <div class="count">0</div>
+
+      <div class="buttons">
+        <button onclick="addClick()">Лайк 👋</button>
+        <a href="https://github.com/" target="_blank">Мой GitHub</a>
+      </div>
+    </div>
+
+    <div class="projects">
+      <div class="projects-card">
+        <h3>Проект 1</h3>
+        <p>Мой первый HTML-сайт.</p>
+      </div>
+
+      <div class="projects-card">
+        <h3>Проект 2</h3>
+        <p>Страница со стилями и кнопкой.</p>
+      </div>
+
+      <div class="project-card">
+        <h3>Проект 3</h3>
+        <p>Сайт со счётчиком кликов</p>
+      </div>
+    </div>
   </div>
+
   <script>
     let count = 0;
 
     function addClick() {
       count++;
-      document.getElementById('count').innerText = count;
+      document.getElementById('count').textContent = count;
     }
   </script>
-  
 </body>
 </html>
