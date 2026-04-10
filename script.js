@@ -1,9 +1,18 @@
-let count = localStorage.getItem('likes') || 0;
+let like = localStorage.getItem('like') === 'true';
 
-document.getElementById('count').innerText = count;
+const btn = document.getElementById('like-btn');
 
-function addClick() {
-  count++;
-  localStorage.setItem('likes', count);
-  document.getElementById('count').innerText = count;
+function updateUI(){
+  if(like){
+    btn.innerText = '💔 Убрать лайк'
+  } else {
+    btn.innerText = '❤️ Лайк'
+  }
 }
+
+function toggleLike(){
+  like = !like;
+  localStorage.setItem('like', like);
+  updateUI();
+}
+updateUI();
