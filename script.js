@@ -1,9 +1,9 @@
-let like = localStorage.getItem('like') === 'true';
+let liked = localStorage.getItem('liked') === 'true';
 
-const btn = document.getElementById('like-btn');
+const btn = document.getElementById('likeBtn');
 
 function updateUI(){
-  if(like){
+  if(liked){
     btn.innerText = '💔 Убрать лайк'
   } else {
     btn.innerText = '❤️ Лайк'
@@ -11,8 +11,8 @@ function updateUI(){
 }
 
 function toggleLike(){
-  like = !like;
-  localStorage.setItem('like', like);
+  liked = !liked;
+  localStorage.setItem('liked', liked);
   updateUI();
 }
 updateUI();
