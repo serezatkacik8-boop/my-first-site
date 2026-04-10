@@ -5,6 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Мой сайт</title>
   <style>
+    .card {background: #1e293b;
+      padding: 30px;
+      border-radius: 20px;
+      text-align: center;
+      width: 300px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    }
     body {
       background:#1e1e1e;
       color: white;
@@ -25,12 +32,12 @@
   </style>
 </head>
 <body>
-  <h1>Привет, я Сергей 👋</h1>
-  <p>Это мой первый сайт</p>
-  <h2 id="count">0</h2>
-  <button onclick="addClick()">
-    Нажми меня
-  </button>
+  <div class="card">
+    <h1>Привет, я Сергей 👋</h1>
+    <p>Это мой первый сайт</p>
+    <h2 id="count">0</h2>
+    <button onclick="addClick()">Лайк 👍</button>
+  </div>
   <script>
     let count = 0;
 
