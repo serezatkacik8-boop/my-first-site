@@ -1,5 +1,9 @@
-let count = 0;
+let count = localStorage.getItem('likes') || 0;
 
-    function addClick() {
-      count++;
-      document.getElementById('count').textContent = count;}
+document.getElementById('count').innerText = count;
+
+function addClick() {
+  count++;
+  localStorage.setItem('likes', count);
+  document.getElementById('count').innerText = count;
+}
