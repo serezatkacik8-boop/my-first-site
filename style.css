@@ -16,11 +16,13 @@
       gap: 30px;
     }
     .card{
-      background: rgba(255, 255, 255, 0.8);
+      background: rgba(255, 255, 255, 0.08);
       border-radius: 20px;
       padding: 30px;
       text-align: center;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
      
     }
     .avatar{
@@ -47,19 +49,22 @@
       margin: 10px 5px 0;
       padding: 12px 20px;
       border: none;
-      border-radius: 10px;
+      border-radius: 12px;
       text-decoration: none;
       font-size: 16px;
       cursor: pointer;
-        transition: background 0.2s ease, color 0.2s ease;
+      transition: transform 0.2s ease, opacity 0.2s ease, box-shadow 0.2s;
     }
     button{
       background: #00ff88;
       color: white;
+      font-weight: bold;
+      box-shadow: 0 8px 20px rgba(0, 255, 136, 0.25);
     }
     a{
       background: #2563ed;
       color: white;
+      box-shadow: 0 8px 20px rgba(37, 99, 235, 0.25);
     }
     .projects{
       display: grid;
@@ -67,11 +72,13 @@
       gap: 20px;
     }
     .projects-card{
-      background: rgba(255, 255, 255, 0.8);
+      background: rgba(255, 255, 255, 0.08);
       border-radius: 16px;
       padding: 20px;
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
       transition: transform 0.2s ease, box-shadow 0.2s ease;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+
     }
     .projects-card h3{
       margin-top: 0;
@@ -123,12 +130,22 @@
       input{
         width: 100%;
         box-sizing: border-box;
-        padding: 10px;
-        border-radius: 10px;
-        border: none;
+        padding: 12px 14px;
+        border-radius: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.12);
         margin-top: 10px;
         text-align: center;
         font-size: 16px;
+        color: white;
+        background: rgba(255, 255, 255, 0.08);
+        outline: none;
+      }
+      input::placeholder{
+        color: rgba(255, 255, 255, 0.08);
+      }
+      input:focus{
+        border-color: #00ff88;
+        box-shadow: 0 0 0 3px rgba(0, 255, 136, 0.15);
       }
 
       .avatar{
@@ -152,13 +169,13 @@
       }
     }
     .projects-card:hover{
-      transform: translateY(-5px);
-      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+      transform: translateY(-6px);
+      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.28);
     }
     button:hover,
     a:hover{
-      transform: scale(1.03);
-      opacity: 0.95;
+      transform: translateY(-2px);
+      opacity: 0.97;
     }
     input{
       padding: 12px;
@@ -166,4 +183,14 @@
       border: none;
       margin-top: 10px;
       width: 100%;
+    }
+    h1, 
+    h2, 
+    h3 {
+      letter-spacing: 0.5px;
+    }
+
+    h2{
+      color: #00ff88;
+      margin-top: 0;
     }
