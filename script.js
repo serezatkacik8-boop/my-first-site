@@ -32,3 +32,14 @@ function checkGuess(){
     document.getElementById('result').innerText = 'Не угадал 😢';
   }
 }
+function sendForm() {
+  const name = document.getElementById('nameInput').value;
+  const message = document.getElementById('messageInput').value;
+  const result = document.getElementById('formResult');
+
+  if(!name || !message){
+    result.innerText = 'Заполни все поля ❌';
+    return;
+  }
+  result.innerText = `Спасибо, ${name}! Сообщение отправлено 🚀`
+}

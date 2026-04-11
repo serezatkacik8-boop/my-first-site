@@ -15,7 +15,7 @@
       <p>Я учусь делать сайт и работать с GitHub</p>
       <p>Это мой первый сайт-портфолио</p>
 
-      <div id="count">0</div>
+      <div id="count"></div>
 
       <div class="buttons">
         <button onclick="toggleLike()" id="likeBtn">
@@ -58,6 +58,16 @@
       <button onclick="checkGuess()">Проверить</button>
 
       <div id="result"></div>
+    </div>
+    <div class="card">
+      <h2>Связаться со мной 🧾</h2>
+
+      <input type="text" id="nameInput" placeholder="Твоё имя">
+      <input type="text" id="messageInput" placeholder="Сообщение">
+
+      <button onclick="sendForm()">Отправить</button>
+
+      <p id="formResult"></p>
     </div>
   </div>
   <script src="script.js"></script>

@@ -160,3 +160,10 @@
       transform: scale(1.03);
       opacity: 0.95;
     }
+    input{
+      padding: 12px;
+      border-radius: 10px;
+      border: none;
+      margin-top: 10px;
+      width: 100%;
+    }
